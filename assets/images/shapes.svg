@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200"
+    xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+    <!-- Persegi -->
+    <rect id="square" x="20" y="20" width="70" height="70"
+        fill="#888888" stroke="#000000" stroke-width="2"/>
+
+    <!-- Lingkaran -->
+    <circle id="circle" cx="140" cy="55" r="35"
+        fill="#888888" stroke="#000000" stroke-width="2"/>
+
+</svg>
