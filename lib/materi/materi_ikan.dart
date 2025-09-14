@@ -1,37 +1,69 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class MateriIkan extends StatelessWidget {
+class MateriIkan extends StatefulWidget {
   final Map<String, String> data;
   const MateriIkan({super.key, required this.data});
 
+  @override
+  State<MateriIkan> createState() => _MateriIkanState();
+}
+
+class _MateriIkanState extends State<MateriIkan> {
+  String? selectedImage; // gambar yang aktif
+  int? expandedIndex; // index yang sedang terbuka
+
+  // Daftar materi + gambar highlight
   final List<Map<String, String>> materi = const [
     {
-      "judul": "Sistem Pernapasan",
-      "isi": "Ikan bernapas dengan insang yang menyaring oksigen dari air."
+      "judul": "Kepala",
+      "isi": "Terdapat mata, mulut, dan insang.",
+      "gambar": "assets/images/ikan_kepala.png"
     },
     {
-      "judul": "Sistem Pencernaan",
-      "isi": "Ikan menelan makanan langsung, lalu dicerna di lambung dan usus."
+      "judul": "Insang",
+      "isi": "Untuk bernapas di dalam air, terletak di sisi kepala.",
+      "gambar": "assets/images/ikan.png" // default ikan utuh
     },
     {
-      "judul": "Sistem Peredaran Darah",
-      "isi": "Ikan memiliki jantung dua ruang yang memompa darah ke insang dan seluruh tubuh."
+      "judul": "Sisik",
+      "isi": "Menutupi tubuh dan melindungi ikan.",
+      "gambar": "assets/images/ikan_badan.png"
+    },
+    {
+      "judul": "Sirip",
+      "isi":
+      "Terdiri dari sirip dada, sirip punggung, dan sirip perut, berfungsi untuk berenang dan menjaga keseimbangan.",
+      "gambar": "assets/images/ikan_sirip.png"
+    },
+    {
+      "judul": "Ekor",
+      "isi": "Mendorong tubuh agar ikan bisa bergerak maju di air.",
+      "gambar": "assets/images/ikan_ekor.png"
     },
   ];
 
   @override
+  void initState() {
+    super.initState();
+    selectedImage = widget.data['gambar']; // gambar default dari data
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Materi ${data['nama']}")),
+      appBar: AppBar(title: Text("Materi ${widget.data['nama']}")),
       body: Column(
         children: [
           const SizedBox(height: 20),
           Hero(
-            tag: data['nama']!,
-            child: SvgPicture.asset(
-              data['gambar']!,
-              height: 180,
+            tag: widget.data['nama']!,
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 500), // transisi smooth
+              child: Image.asset(
+                selectedImage!,
+                key: ValueKey(selectedImage),
+                height: 180,
+              ),
             ),
           ),
           const SizedBox(height: 20),
@@ -44,7 +76,19 @@ class MateriIkan extends StatelessWidget {
                 return Card(
                   margin: const EdgeInsets.only(bottom: 12),
                   child: ExpansionTile(
+                    key: ValueKey(index == expandedIndex), // penting! reset state
                     title: Text(item['judul']!),
+                    initiallyExpanded: expandedIndex == index,
+                    onExpansionChanged: (expanded) {
+                      setState(() {
+                        if (expanded) {
+                          expandedIndex = index; // buka hanya yang ini
+                          selectedImage = item['gambar'];
+                        } else if (expandedIndex == index) {
+                          expandedIndex = null; // kalau ditutup manual
+                        }
+                      });
+                    },
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(12.0),

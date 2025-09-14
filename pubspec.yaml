@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -58,6 +59,23 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/shapes.svg
-    - assets/images/ikan.svg
-    - assets/images/ayam.svg
-    - assets/images/gajah.svg
+    - assets/images/ikan.png
+    - assets/images/ikan_kepala.png
+    - assets/images/ikan_badan.png
+    - assets/images/ikan_ekor.png
+    - assets/images/ikan_sirip.png
+    - assets/images/ayam.png
+    - assets/images/ayam_bulu.png
+    - assets/images/ayam_ceker.png
+    - assets/images/ayam_ekor.png
+    - assets/images/ayam_jengger.png
+    - assets/images/ayam_kepala.png
+    - assets/images/ayam_paruh.png
+    - assets/images/ayam_sayap.png
+    - assets/images/gajah.png
+    - assets/images/gajah_belalai.png
+    - assets/images/gajah_ekor.png
+    - assets/images/gajah_gading.png
+    - assets/images/gajah_kaki.png
+    - assets/images/gajah_kepala.png
+    - assets/images/gajah_telinga.png

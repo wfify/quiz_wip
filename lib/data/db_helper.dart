@@ -20,7 +20,7 @@ class DBHelper {
 
     return await openDatabase(
       path,
-      version: 3, // naikkan versi biar trigger onUpgrade
+      version: 5, // 🔼 naikkan versi biar upgrade dijalankan
       onCreate: (db, version) async {
         await db.execute('''
           CREATE TABLE questions (
@@ -28,14 +28,18 @@ class DBHelper {
             questionText TEXT NOT NULL,
             options TEXT NOT NULL, -- opsi dipisahkan dengan '|'
             correctAnswerIndex INTEGER NOT NULL,
-            kodeHewan TEXT NOT NULL
+            kodeHewan TEXT NOT NULL,
+            explanation TEXT, -- penjelasan jawaban
+            imagePath TEXT -- path gambar soal
           )
         ''');
       },
       onUpgrade: (db, oldVersion, newVersion) async {
-        if (oldVersion < 3) {
-          // Tambahkan kolom baru kalau belum ada
-          await db.execute('ALTER TABLE questions ADD COLUMN kodeHewan TEXT');
+        if (oldVersion < 4) {
+          await db.execute('ALTER TABLE questions ADD COLUMN explanation TEXT');
+        }
+        if (oldVersion < 5) {
+          await db.execute('ALTER TABLE questions ADD COLUMN imagePath TEXT');
         }
       },
     );

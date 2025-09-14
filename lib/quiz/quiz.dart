@@ -38,18 +38,53 @@ class _QuizState extends State<Quiz> {
   }
 
   void _answerQuestion(int selectedIndex) {
-    final correct = _questions[_currentIndex].correctAnswerIndex;
-    if (selectedIndex == correct) {
+    final question = _questions[_currentIndex];
+    final correctIndex = question.correctAnswerIndex;
+    final isCorrect = selectedIndex == correctIndex;
+
+    if (isCorrect) {
       _score++;
     }
 
-    if (_currentIndex < _questions.length - 1) {
-      setState(() {
-        _currentIndex++;
-      });
-    } else {
-      _showResult();
-    }
+    // tampilkan feedback sebelum lanjut
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text(
+          isCorrect ? "Benar 🎉" : "Salah ❌",
+          style: TextStyle(
+            color: isCorrect ? Colors.green : Colors.red,
+          ),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              "Jawaban yang benar: ${question.options[correctIndex]}",
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            Text(question.explanation ?? "Tidak ada penjelasan"),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context); // tutup dialog
+
+              if (_currentIndex < _questions.length - 1) {
+                setState(() {
+                  _currentIndex++;
+                });
+              } else {
+                _showResult();
+              }
+            },
+            child: const Text("Lanjut"),
+          )
+        ],
+      ),
+    );
   }
 
   void _showResult() {
@@ -99,11 +134,27 @@ class _QuizState extends State<Quiz> {
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
+
+            // === tampilkan gambar kalau ada ===
+            if (question.imagePath != null && question.imagePath!.isNotEmpty) ...[
+              Center(
+                child: Image.asset(
+                  question.imagePath!,
+                  height: 180,
+                  fit: BoxFit.contain,
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
+
+            // === pertanyaan ===
             Text(
               question.questionText,
               style: const TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 20),
+
+            // === opsi jawaban ===
             ...List.generate(question.options.length, (i) {
               return Container(
                 margin: const EdgeInsets.symmetric(vertical: 6),

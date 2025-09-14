@@ -15,7 +15,6 @@ void main() async {
     print("=== Seeding Data ===");
     await SeedQuestion.seed();
     print("Seeding berhasil.");
-
   } catch (e, stacktrace) {
     print("Terjadi error saat init DB atau seeding: $e");
     print(stacktrace);

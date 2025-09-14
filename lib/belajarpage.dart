@@ -69,9 +69,9 @@ class BelajarPage extends StatelessWidget {
   const BelajarPage({super.key});
 
   final List<Map<String, String>> hewan = const [
-    {"nama": "Ayam", "gambar": "assets/images/ayam.svg"},
-    {"nama": "Ikan", "gambar": "assets/images/ikan.svg"},
-    {"nama": "Gajah", "gambar": "assets/images/gajah.svg"},
+    {"nama": "Ayam", "gambar": "assets/images/ayam.png"},
+    {"nama": "Ikan", "gambar": "assets/images/ikan.png"},
+    {"nama": "Gajah", "gambar": "assets/images/gajah.png"},
     {"nama": "Cicak", "gambar": ""},
   ];
 
@@ -127,9 +127,14 @@ class BelajarPage extends StatelessWidget {
                   if (data['gambar'] != null && data['gambar']!.isNotEmpty)
                     Hero(
                       tag: data['nama']!,
-                      child: SvgPicture.asset(
+                      child: data['gambar']!.endsWith('.svg')
+                          ? SvgPicture.asset(
                         data['gambar']!,
                         height: 100,
+                      )
+                          : Image.asset(
+                        data['gambar']!,
+                        height: 80,
                       ),
                     )
                   else
