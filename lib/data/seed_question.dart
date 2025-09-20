@@ -314,7 +314,7 @@ class SeedQuestion {
         "options": "Samping tubuh|Ekor|Kepala",
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
-        "explanation": "Sirip dada berada di samping tubuh dekat kepala.",
+        "explanation": "Sirip dada berada di samping tubuh ikan, dekat kepalanya.",
         "imagePath": "assets/images/ikan.png"
       },
       {
@@ -322,7 +322,7 @@ class SeedQuestion {
         "options": "Insang|Sirip|Sisik",
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
-        "explanation": "Insang digunakan ikan untuk bernapas di air.",
+        "explanation": "[Insang] digunakan ikan untuk bernapas di air.",
         "imagePath": "assets/images/ikan.png"
       },
     ];
