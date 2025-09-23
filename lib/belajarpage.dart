@@ -72,7 +72,7 @@ class BelajarPage extends StatelessWidget {
     {"nama": "Ayam", "gambar": "assets/images/ayam.png"},
     {"nama": "Ikan", "gambar": "assets/images/ikan.png"},
     {"nama": "Gajah", "gambar": "assets/images/gajah.png"},
-    {"nama": "Cicak", "gambar": ""},
+    {"nama": "Cicak", "gambar": "assets/images/cicak.png"},
   ];
 
   @override
