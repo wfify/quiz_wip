@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart'; // package untuk audio
+import 'package:audioplayers/audioplayers.dart';
 
 class MateriAyam extends StatefulWidget {
   final Map<String, String> data;
@@ -10,53 +10,52 @@ class MateriAyam extends StatefulWidget {
 }
 
 class _MateriAyamState extends State<MateriAyam> {
-  String? selectedImage; // gambar yang aktif
-  int? expandedIndex; // index yang sedang terbuka
+  String? selectedImage;
+  int? expandedIndex;
   final AudioPlayer audioPlayer = AudioPlayer();
 
-  // Daftar materi ayam
   final List<Map<String, String>> materi = const [
     {
       "judul": "Kepala",
       "isi": "Ada mata, paruh, dan jengger (tonjolan merah di atas kepala).",
-      "gambar": "assets/images/ayam_kepala.png"
+      "gambar": "assets/images/ayam/ayam_kepala.png"
     },
     {
       "judul": "Paruh",
       "isi": "Dipakai untuk mematuk makanan, misalnya biji-bijian atau nasi.",
-      "gambar": "assets/images/ayam_paruh.png"
+      "gambar": "assets/images/ayam/ayam_paruh.png"
     },
     {
       "judul": "Jengger",
       "isi": "Tanda khas ayam, bentuknya merah dan terlihat di atas kepala.",
-      "gambar": "assets/images/ayam_jengger.png"
+      "gambar": "assets/images/ayam/ayam_jengger.png"
     },
     {
       "judul": "Sayap",
       "isi": "Untuk menjaga keseimbangan tubuh dan membantu ayam terbang sebentar.",
-      "gambar": "assets/images/ayam_sayap.png"
+      "gambar": "assets/images/ayam/ayam_sayap.png"
     },
     {
       "judul": "Kaki dan Cakar",
       "isi": "Dipakai untuk berjalan dan mengais tanah mencari makanan.",
-      "gambar": "assets/images/ayam_ceker.png"
+      "gambar": "assets/images/ayam/ayam_ceker.png"
     },
     {
       "judul": "Bulu",
       "isi": "Menutupi tubuh agar tetap hangat.",
-      "gambar": "assets/images/ayam_bulu.png"
+      "gambar": "assets/images/ayam/ayam_bulu.png"
     },
     {
       "judul": "Ekor",
       "isi": "Membantu ayam menjaga keseimbangan.",
-      "gambar": "assets/images/ayam_ekor.png"
+      "gambar": "assets/images/ayam/ayam_ekor.png"
     },
     {
       "judul": "Tambahan",
       "isi":
       "Ayam ada dua jenis, yaitu ayam jantan (jago) yang suka berkokok, dan ayam betina yang bisa bertelur. "
           "Ayam suka makan jagung, padi, atau cacing kecil.",
-      "gambar": "assets/images/ayam.png"
+      "gambar": "assets/images/ayam/ayam.png"
     },
   ];
 
@@ -73,8 +72,7 @@ class _MateriAyamState extends State<MateriAyam> {
   }
 
   void playSound() async {
-    // memutar file audio dari assets, misal 'assets/audio/ayam_kokok.mp3'
-    await audioPlayer.play(AssetSource('audio/ayam_kokok.mp3'));
+    await audioPlayer.play(AssetSource('audio/ayam.mp3'));
   }
 
   @override
@@ -82,108 +80,189 @@ class _MateriAyamState extends State<MateriAyam> {
     final double buttonWidth = MediaQuery.of(context).size.width / 2 - 24;
 
     return Scaffold(
-      appBar: AppBar(title: Text("Materi ${widget.data['nama']}")),
-      body: Column(
+      body: Stack(
         children: [
-          const SizedBox(height: 20),
-          // Stack untuk gambar + tombol speaker
-          Stack(
-            children: [
-              Center(
-                child: Hero(
-                  tag: widget.data['nama']!,
-                  child: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 500),
-                    child: Image.asset(
-                      selectedImage!,
-                      key: ValueKey(selectedImage),
-                      height: 180,
+          // Konten scrollable
+          SingleChildScrollView(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: 50), // Ruang untuk tombol back tetap
+                // Section gambar + nama + penjelasan singkat
+                Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        image: const DecorationImage(
+                          image: AssetImage('assets/ui/board_q.png'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const SizedBox(height: 0),
+                          Text(
+                            widget.data['nama'] ?? '',
+                            style: const TextStyle(
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          const SizedBox(height: 36),
+                          // Gambar dengan AnimatedSwitcher
+                          AnimatedSwitcher(
+                            duration: const Duration(milliseconds: 500),
+                            transitionBuilder:
+                                (Widget child, Animation<double> animation) {
+                              return FadeTransition(opacity: animation, child: child);
+                            },
+                            child: Image.asset(
+                              selectedImage!,
+                              key: ValueKey<String>(selectedImage!),
+                              height: 300,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Container(
+                            padding: const EdgeInsets.all(12),
+                            color: Colors.black54,
+                            child: const Text(
+                              "Ayam adalah hewan yang sering dipelihara di rumah. Ayam bisa bertelur dan juga berkokok.",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 18, color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      top: 8,
+                      right: 8,
+                      child: IconButton(
+                        iconSize: 30,
+                        onPressed: playSound,
+                        icon: Image.asset(
+                          'assets/ui/audio.png',
+                          width: 30,
+                          height: 30,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              Positioned(
-                top: 0,
-                right: 16,
-                child: IconButton(
-                  icon: const Icon(Icons.volume_up, size: 30, color: Colors.orange),
-                  onPressed: playSound,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              "Ayam adalah hewan yang sering dipelihara di rumah. "
-                  "Ayam bisa bertelur dan juga berkokok.",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
-            ),
-          ),
-          const SizedBox(height: 20),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16),
-              child: Wrap(
-                spacing: 12,
-                runSpacing: 12,
-                children: List.generate(materi.length, (index) {
-                  final item = materi[index];
+                const SizedBox(height: 16),
+                // Tombol materi
+                Wrap(
+                  spacing: 12,
+                  runSpacing: 12,
+                  children: List.generate(materi.length, (index) {
+                    final item = materi[index];
 
-                  if (expandedIndex == index) {
+                    if (expandedIndex == index) {
+                      return SizedBox(
+                        width: MediaQuery.of(context).size.width - 32,
+                        child: Container(
+                          padding: const EdgeInsets.all(28),
+                          decoration: BoxDecoration(
+                            image: const DecorationImage(
+                              image: AssetImage('assets/ui/board_a.png'),
+                              fit: BoxFit.fill,
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    item['judul']!,
+                                    style: const TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        expandedIndex = null;
+                                        selectedImage = widget.data['gambar'];
+                                      });
+                                    },
+                                    child: Image.asset(
+                                      'assets/ui/btn_x.png',
+                                      width: 30,
+                                      height: 30,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 12),
+                              Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: Text(
+                                  item['isi']!,
+                                  style: const TextStyle(
+                                      fontSize: 24, color: Colors.black),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    }
+
                     return SizedBox(
                       width: item['judul'] == "Tambahan"
                           ? MediaQuery.of(context).size.width - 32
-                          : MediaQuery.of(context).size.width - 32,
-                      child: Card(
-                        color: Colors.blue.shade50,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            ListTile(
-                              title: Text(
-                                item['judul']!,
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              trailing: IconButton(
-                                icon: const Icon(Icons.close),
-                                onPressed: () {
-                                  setState(() {
-                                    expandedIndex = null;
-                                    selectedImage = widget.data['gambar'];
-                                  });
-                                },
-                              ),
+                          : buttonWidth,
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            expandedIndex = index;
+                            selectedImage = item['gambar'];
+                          });
+                        },
+                        child: Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                            image: const DecorationImage(
+                              image: AssetImage('assets/ui/btn_blue.png'),
+                              fit: BoxFit.fill,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Text(item['isi']!),
-                            )
-                          ],
+                          ),
+                          alignment: Alignment.center,
+                          child: Text(
+                            item['judul']!,
+                            style: const TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ),
                     );
-                  }
-
-                  return SizedBox(
-                    width: item['judul'] == "Tambahan"
-                        ? MediaQuery.of(context).size.width - 32
-                        : buttonWidth,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          expandedIndex = index;
-                          selectedImage = item['gambar'];
-                        });
-                      },
-                      child: Text(item['judul']!),
-                    ),
-                  );
-                }),
+                  }),
+                ),
+              ],
+            ),
+          ),
+          // Tombol back tetap di atas layar
+          Positioned(
+            top: 16,
+            left: 16,
+            child: GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Image.asset(
+                'assets/ui/btn_back.png',
+                width: 50,
+                height: 50,
               ),
             ),
           ),

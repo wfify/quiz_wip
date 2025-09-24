@@ -13,7 +13,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "cicak",
         "explanation": "Cicak dapat memutuskan ekornya (autotomi) untuk mengelabui musuh.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Bagian tubuh cicak yang digunakan untuk menempel di dinding adalah …",
@@ -21,7 +21,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "cicak",
         "explanation": "Cicak menempel di dinding dengan telapak kakinya yang memiliki bantalan perekat.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Organ luar cicak yang digunakan untuk melihat adalah …",
@@ -29,7 +29,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "cicak",
         "explanation": "Mata cicak berfungsi sebagai organ penglihatan.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Bagian tubuh cicak yang digunakan untuk menangkap serangga adalah …",
@@ -37,7 +37,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "cicak",
         "explanation": "Lidah cicak panjang dan lengket sehingga dapat menangkap serangga.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Ekor cicak yang putus dapat …",
@@ -45,7 +45,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "cicak",
         "explanation": "Ekor cicak dapat tumbuh kembali setelah putus.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Organ luar cicak yang berjumlah empat dan digunakan untuk berjalan adalah …",
@@ -53,7 +53,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "cicak",
         "explanation": "Cicak memiliki empat kaki untuk berjalan dan memanjat.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Lubang hidung cicak terdapat pada bagian …",
@@ -61,7 +61,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "cicak",
         "explanation": "Lubang hidung cicak terdapat di bagian kepala untuk bernapas.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Kulit cicak berfungsi untuk …",
@@ -69,7 +69,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "cicak",
         "explanation": "Kulit cicak berfungsi melindungi tubuh dari gangguan luar.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Bagian tubuh cicak yang bisa tumbuh kembali setelah putus adalah …",
@@ -77,7 +77,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "cicak",
         "explanation": "Ekor cicak dapat tumbuh kembali setelah putus.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
       {
         "questionText": "Mata cicak termasuk organ luar yang berfungsi untuk …",
@@ -85,7 +85,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "cicak",
         "explanation": "Mata cicak berfungsi untuk melihat.",
-        "imagePath": "assets/images/cicak.png"
+        "imagePath": "assets/images/cicak/cicak.png"
       },
 
       // ================= AYAM =================
@@ -95,7 +95,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "ayam",
         "explanation": "Ayam menggunakan paruhnya untuk mematuk makanan.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Organ luar ayam yang terdapat di kepala dan berwarna merah disebut …",
@@ -103,7 +103,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ayam",
         "explanation": "Jengger adalah tonjolan merah di kepala ayam.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Sayap ayam merupakan organ luar yang berfungsi untuk …",
@@ -111,7 +111,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "ayam",
         "explanation": "Sayap ayam membantu terbang jarak pendek dan menjaga keseimbangan.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Kaki ayam memiliki cakar yang berfungsi untuk …",
@@ -119,7 +119,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ayam",
         "explanation": "Cakar ayam digunakan untuk mengais tanah mencari makanan.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Bulu ayam sebagai organ luar berfungsi untuk …",
@@ -127,7 +127,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ayam",
         "explanation": "Bulu ayam melindungi tubuh dan menjaga suhu tetap hangat.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Ekor ayam sebagai organ luar berfungsi untuk …",
@@ -135,7 +135,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ayam",
         "explanation": "Ekor ayam membantu menjaga keseimbangan tubuh.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Mata ayam berfungsi sebagai organ luar untuk …",
@@ -143,7 +143,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ayam",
         "explanation": "Mata ayam berfungsi untuk melihat.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Paruh ayam termasuk organ luar, apa fungsinya?",
@@ -151,7 +151,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ayam",
         "explanation": "Paruh ayam digunakan untuk mematuk dan mengambil makanan.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Jengger ayam terdapat di bagian …",
@@ -159,7 +159,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ayam",
         "explanation": "Jengger ayam terletak di bagian kepala.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
       {
         "questionText": "Sayap ayam terletak di bagian tubuh …",
@@ -167,7 +167,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ayam",
         "explanation": "Sayap ayam menempel di samping tubuh.",
-        "imagePath": "assets/images/ayam.png"
+        "imagePath": "assets/images/ayam/ayam.png"
       },
 
       // ================= GAJAH =================
@@ -177,7 +177,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "gajah",
         "explanation": "Belalai gajah panjang dan lentur untuk mengambil makanan dan minum.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Belalai gajah digunakan untuk …",
@@ -185,7 +185,7 @@ class SeedQuestion {
         "correctAnswerIndex": 1,
         "kodeHewan": "gajah",
         "explanation": "Belalai digunakan gajah untuk mengambil makanan, minum, dan menyemprot air.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Telinga gajah yang lebar berfungsi untuk …",
@@ -193,7 +193,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "gajah",
         "explanation": "Telinga gajah membantu mendengar dan mengatur suhu tubuh.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Gading gajah merupakan organ luar yang berfungsi untuk …",
@@ -201,7 +201,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "gajah",
         "explanation": "Gading digunakan untuk melindungi diri dan menggali tanah.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Ekor gajah sebagai organ luar berfungsi untuk …",
@@ -209,7 +209,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "gajah",
         "explanation": "Ekor gajah digunakan untuk mengusir lalat dan serangga.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Kaki gajah yang besar termasuk organ luar yang berfungsi untuk …",
@@ -217,7 +217,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "gajah",
         "explanation": "Kaki gajah yang besar menopang tubuh yang berat.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Mata gajah termasuk organ luar yang berfungsi untuk …",
@@ -225,7 +225,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "gajah",
         "explanation": "Mata gajah berfungsi sebagai alat penglihatan.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Gading gajah terletak di bagian …",
@@ -233,7 +233,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "gajah",
         "explanation": "Gading gajah terdapat di kepala, tumbuh keluar dari rahang atas.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Belalai gajah merupakan organ luar yang juga berfungsi untuk …",
@@ -241,7 +241,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "gajah",
         "explanation": "Belalai gajah digunakan untuk menyemprot air.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
       {
         "questionText": "Telinga gajah terletak di bagian …",
@@ -249,7 +249,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "gajah",
         "explanation": "Telinga gajah terletak di bagian kepala.",
-        "imagePath": "assets/images/gajah.png"
+        "imagePath": "assets/images/gajah/gajah.png"
       },
 
       // ================= IKAN =================
@@ -259,7 +259,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "Sirip ikan digunakan untuk berenang dan menjaga keseimbangan.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
       {
         "questionText": "Ekor ikan sebagai organ luar berfungsi untuk …",
@@ -267,7 +267,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "Ekor ikan membantu mendorong tubuh agar bergerak maju di air.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
       {
         "questionText": "Insang ikan terletak di bagian …",
@@ -275,7 +275,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "Insang ikan terletak di sisi kepala dan berfungsi untuk bernapas.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
       {
         "questionText": "Sisik ikan sebagai organ luar berfungsi untuk …",
@@ -283,7 +283,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "Sisik ikan menutupi tubuh dan melindungi dari bahaya.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
       {
         "questionText": "Mata ikan merupakan organ luar yang berfungsi untuk …",
@@ -291,7 +291,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "Mata ikan berfungsi sebagai alat penglihatan.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
       {
         "questionText": "Mulut ikan sebagai organ luar berfungsi untuk …",
@@ -299,7 +299,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "Mulut ikan digunakan untuk memasukkan makanan.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
       {
         "questionText": "Sirip punggung ikan terletak di bagian …",
@@ -307,7 +307,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "Sirip punggung berada di bagian atas tubuh ikan.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
       {
         "questionText": "Sirip dada ikan terletak di bagian …",
@@ -315,7 +315,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "Sirip dada berada di samping tubuh ikan, dekat kepalanya.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
       {
         "questionText": "Organ luar ikan yang digunakan untuk bernapas adalah …",
@@ -323,7 +323,7 @@ class SeedQuestion {
         "correctAnswerIndex": 0,
         "kodeHewan": "ikan",
         "explanation": "[Insang] digunakan ikan untuk bernapas di air.",
-        "imagePath": "assets/images/ikan.png"
+        "imagePath": "assets/images/ikan/ikan.png"
       },
     ];
 

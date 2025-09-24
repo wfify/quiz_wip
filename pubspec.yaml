@@ -1,39 +1,17 @@
-name: game_quiz
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
+name: Belajar_Hewan
+description: "Aplikasi interaktif untuk belajar tentang hewan."
+
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
 environment:
   sdk: ^3.8.1
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.2.1
   sqflite: ^2.4.0
@@ -44,45 +22,49 @@ dev_dependencies:
     sdk: flutter
   audioplayers: ^6.5.1
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^5.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/shapes.svg
-    - assets/images/ikan.png
-    - assets/images/ikan_kepala.png
-    - assets/images/ikan_badan.png
-    - assets/images/ikan_ekor.png
-    - assets/images/ikan_sirip.png
-    - assets/images/ayam.png
-    - assets/images/ayam_bulu.png
-    - assets/images/ayam_ceker.png
-    - assets/images/ayam_ekor.png
-    - assets/images/ayam_jengger.png
-    - assets/images/ayam_kepala.png
-    - assets/images/ayam_paruh.png
-    - assets/images/ayam_sayap.png
-    - assets/images/gajah.png
-    - assets/images/gajah_belalai.png
-    - assets/images/gajah_ekor.png
-    - assets/images/gajah_gading.png
-    - assets/images/gajah_kaki.png
-    - assets/images/gajah_kepala.png
-    - assets/images/gajah_telinga.png
-    - assets/images/cicak.png
-    - assets/images/cicak_kepala.png
-    - assets/images/cicak_ekor.png
-    - assets/images/cicak_badan.png
-    - assets/images/cicak_kaki.png
-    - assets/images/cicak_lidah.png
+    - assets/images/ikan/ikan.png
+    - assets/images/ikan/ikan_kepala.png
+    - assets/images/ikan/ikan_badan.png
+    - assets/images/ikan/ikan_ekor.png
+    - assets/images/ikan/ikan_sirip.png
+    - assets/images/ayam/ayam.png
+    - assets/images/ayam/ayam_bulu.png
+    - assets/images/ayam/ayam_ceker.png
+    - assets/images/ayam/ayam_ekor.png
+    - assets/images/ayam/ayam_jengger.png
+    - assets/images/ayam/ayam_kepala.png
+    - assets/images/ayam/ayam_paruh.png
+    - assets/images/ayam/ayam_sayap.png
+    - assets/images/gajah/gajah.png
+    - assets/images/gajah/gajah_belalai.png
+    - assets/images/gajah/gajah_ekor.png
+    - assets/images/gajah/gajah_gading.png
+    - assets/images/gajah/gajah_kaki.png
+    - assets/images/gajah/gajah_kepala.png
+    - assets/images/gajah/gajah_telinga.png
+    - assets/images/cicak/cicak.png
+    - assets/images/cicak/cicak_kepala.png
+    - assets/images/cicak/cicak_ekor.png
+    - assets/images/cicak/cicak_badan.png
+    - assets/images/cicak/cicak_kaki.png
+    - assets/images/cicak/cicak_lidah.png
+    - assets/ui/audio.png
+    - assets/ui/board_a.png
+    - assets/ui/board_q.png
+    - assets/ui/board_q_pic.png
+    - assets/ui/btn_back.png
+    - assets/ui/btn_blue.png
+    - assets/ui/btn_red.png
+    - assets/ui/btn_green.png
+    - assets/ui/btn_x.png
+    - assets/ui/landing.png
+    - assets/ui/btn_title.png
+    - assets/audio/gajah.mp3
+    - assets/audio/ayam.mp3
+    - assets/audio/cicak.mp3
